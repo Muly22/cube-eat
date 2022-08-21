@@ -159,7 +159,6 @@ namespace WinFormsApp1
                     varition[6, 1] = 0 <= Xcube - (i + 1);
                     varition[7, 0] = Yeat == Ycube - (i + 1) && Xeat == Xcube - (i + 1);
                     varition[7, 1] = 0 <= Ycube - (i + 1) && 0 <= Xcube - (i + 1);
-
                     if (varition[j, 0])
                     {
                         vision[j, i] = 0.5f;
