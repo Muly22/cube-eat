@@ -22,7 +22,7 @@ namespace WinFormsApp1
         public int error = 7;
         PictureBox eat = new PictureBox();
         PictureBox cube = new PictureBox();
-        float[,] vision = new float[8, 3];
+        double[,] vision = new double[8, 3];
 
         public Form1()
         {
@@ -32,11 +32,13 @@ namespace WinFormsApp1
             Start();
             this.KeyDown += new KeyEventHandler(OKP);
         }
+
         private void Start()
         {
             cube.Width = sizecube;
             cube.Height = sizecube;
             Generationmap();
+            Weight();
             Cube();
             Eat();
         }
@@ -98,6 +100,7 @@ namespace WinFormsApp1
             Eat_take();
             Сoordinates_system();
             Vision();
+            Perceptron1();
             Text_pointp();
         } //управеление кубом
         private void Text_pointp()
@@ -173,5 +176,29 @@ namespace WinFormsApp1
             }
 
         } // зрение куба
+        public void Weight()
+        {
+
+        }
+        public double ReLU(double x)
+        {
+            if (x > 0)
+            {
+                return x;
+            }
+            return 0;
+        }
+        public void Perceptron1()
+        {
+
+        } //перцептрон
+        public void Perceptron2()
+        {
+
+        }
+        private void timer1_Tick(object state, EventArgs e)
+        {
+
+        }
     }
 }

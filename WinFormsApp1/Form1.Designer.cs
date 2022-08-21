@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cube = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.cube)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +55,10 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "points 0";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -70,5 +76,6 @@
 
         #endregion
         private Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
